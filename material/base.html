@@ -73,11 +73,7 @@
     {% endblock %}
     {% block fonts %}
       {% if font != false %}
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{
-              font.text | replace(' ', '+') + ':300,400,400i,700%7C' +
-              font.code | replace(' ', '+')
-            }}&display=fallback">
+        <link rel="stylesheet" href="/assets/fonts/font-roboto.css">
         <style>body,input{font-family:"{{ font.text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ font.code }}","Courier New",Courier,monospace}</style>
       {% endif %}
     {% endblock %}
@@ -209,7 +205,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/application.df00da5d.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/application.3bd676d2.js' | url }}"></script>
       {% if lang.t("search.language") != "en" %}
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
